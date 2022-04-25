@@ -1,0 +1,18 @@
+{
+	"name": "portfolio",
+	"author": "Drew P. Worden <drew.p.worden@gmail.com>",
+	"description": "A portfolio to introduce and showcase the work of Drew P. Worden.",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"contentful": "^9.1.24",
+		"next": "^12.1.5",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0"
+	}
+}
