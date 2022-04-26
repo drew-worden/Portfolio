@@ -9,15 +9,15 @@ import styles from "../styles/pages/index.module.css"
 import profile from "../assets/images/profile.png"
 
 //Import Utilities
-import { connectToContentful, parseBlogPosts } from "../utilities/contentful"
+import { connectToContentful, parseBlogPosts, dashedCase } from "../utilities/contentful"
 
 //Retrieve Data on Server
 export async function getServerSideProps() {
 	//Get Blog Posts from Contentful
-	const response = await connectToContentful("blogPost", 3)
+	const response = await connectToContentful("blogPost")
 
 	//Parse Blog Posts
-	const parsedBlogPosts = parseBlogPosts(response)
+	const parsedBlogPosts = parseBlogPosts(response).splice(0, 3)
 
 	//Pass Blog Posts as Props
 	return {
@@ -74,17 +74,23 @@ export default function IndexPage({ blogPosts }) {
 			<section className={styles.rightSection}>
 				<section className={styles.subsection} id="blog-section">
 					{blogPosts.map((post) => (
-						<div className={styles.blogPostContainer} key={post.title}>
-							<span className={styles.type}>Blog Post</span>
-							<span className={styles.blogPostTitle}>{post.title}</span>
-							<p className={styles.blogPostBody}>
-								{post.body.substring(0, 200) + "..."}
-							</p>
-							{post.image ? (
-								<img src={post.image} className={styles.blogImage} />
-							) : null}
-							{post.date ? <span className={styles.date}>{post.date}</span> : null}
-						</div>
+						<Link href={"/blog/" + dashedCase(post.title)} key={post.title}>
+							<div className={styles.blogPostContainer}>
+								<span className={styles.type}>Blog Post</span>
+								<span className={styles.blogPostTitle}>{post.title}</span>
+								{post.body ? (
+									<p className={styles.blogPostBody}>
+										{post.body.substring(0, 200) + "..."}
+									</p>
+								) : null}
+								{post.image ? (
+									<img src={post.image} className={styles.blogImage} />
+								) : null}
+								{post.date ? (
+									<span className={styles.date}>{post.date}</span>
+								) : null}
+							</div>
+						</Link>
 					))}
 					<Link href="/blog">
 						<span className={styles.link}>View All Posts</span>

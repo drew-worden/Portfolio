@@ -2,7 +2,7 @@
 import { createClient } from "contentful"
 
 //Connect To Contentful Function
-async function connectToContentful(content, limit) {
+async function connectToContentful(content) {
 	const client = createClient({
 		space: process.env.SPACE,
 		accessToken: process.env.ACCESS_TOKEN
@@ -10,8 +10,7 @@ async function connectToContentful(content, limit) {
 
 	//Get Type of Content
 	const response = await client.getEntries({
-		content_type: content,
-		limit: limit
+		content_type: content
 	})
 
 	//Return Content
@@ -37,5 +36,22 @@ function parseBlogPosts(response) {
 	return parsedList
 }
 
+//Dashed Case Function
+function dashedCase(title) {
+	const parsedTitle = title.replaceAll(" ", "-").toLowerCase()
+	return parsedTitle
+}
+
+//Title Case Function
+function titleCase(title) {
+	const titleList = title.split("-")
+	const titleCaseList = []
+	titleList.forEach((word) => {
+		word = word.slice(0, 1).toUpperCase() + word.slice(1)
+		titleCaseList.push(word)
+	})
+	return titleCaseList.join(" ")
+}
+
 //Export Functions
-export { connectToContentful, parseBlogPosts }
+export { connectToContentful, parseBlogPosts, dashedCase, titleCase }
