@@ -15,6 +15,7 @@ export default function Root({ Component, pageProps }) {
 					content="Drew P. Worden | Mathematics Student
 					Western Connecticut State University"
 				/>
+				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
 			<Component {...pageProps} />
 		</>

@@ -7,11 +7,13 @@
 	background-color: #f8f8f8;
 	width: 50vw;
 	height: 100vh;
-	padding: 60px 90px 90px 90px;
+	padding: 60px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .leftSection::-webkit-scrollbar {
@@ -29,6 +31,8 @@
 	gap: 50px;
 	background-color: #f8f8f8;
 	overflow-y: scroll;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 1) inset;
+	padding: 60px;
 }
 
 .title {
@@ -109,7 +113,6 @@
 }
 
 .subsection {
-	padding: 70px 90px 0px 50px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -192,7 +195,6 @@
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
-	padding: 0px 90px 50px 50px;
 }
 
 .questionAnswerContainer {
@@ -239,7 +241,6 @@
 		width: 100%;
 		overflow-y: auto;
 		height: auto;
-		padding: 0px 90px 50px 90px;
 		overflow: visible;
 	}
 
@@ -249,5 +250,120 @@
 
 	.aboutSubsection {
 		padding: 0px;
+	}
+}
+
+@media (max-width: 750px) {
+	.leftSection {
+		padding-bottom: 40px;
+		padding: 48px;
+	}
+
+	.rightSection {
+		gap: 40px;
+		padding: 48px;
+	}
+
+	.title {
+		font-size: 48px;
+	}
+
+	.position {
+		font-size: 16px;
+		margin-top: 8px;
+	}
+
+	.desc {
+		font-size: 11px;
+		margin-top: 24px;
+	}
+
+	.listContainer {
+		gap: 8px;
+		margin-top: 24px;
+	}
+
+	.listItem {
+		font-size: 11px;
+		padding: 6px;
+		border-radius: 2px;
+	}
+
+	.socialContainer {
+		margin-top: 24px;
+		gap: 16px;
+	}
+
+	.socialTitle {
+		font-size: 9px;
+	}
+
+	.subsection {
+		gap: 16px;
+	}
+
+	.blogPostContainer {
+		padding: 20px;
+		border-radius: 4px;
+	}
+
+	.type {
+		font-size: 10px;
+		margin-bottom: 8px;
+	}
+
+	.blogPostTitle {
+		font-size: 20px;
+	}
+
+	.blogPostBody {
+		font-size: 11px;
+		margin-top: 8px;
+	}
+
+	.link {
+		font-size: 10px;
+	}
+
+	.blogImage {
+		width: 120px;
+		margin-top: 16px;
+	}
+
+	.date {
+		font-size: 10px;
+		margin-top: 12px;
+	}
+	.aboutSubsection {
+		gap: 24px;
+	}
+
+	.questionAnswerContainer {
+		gap: 8px;
+	}
+
+	.questionContainer {
+		padding: 20px;
+		border-radius: 4px;
+	}
+
+	.answerContainer {
+		padding: 20px;
+		border-radius: 4px;
+	}
+
+	.question {
+		font-size: 13px;
+		margin-top: 4px;
+	}
+}
+
+@media (max-width: 500px) {
+	.title {
+		font-size: 35px;
+	}
+
+	.position {
+		font-size: 14px;
 	}
 }

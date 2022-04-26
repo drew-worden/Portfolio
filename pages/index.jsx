@@ -18,7 +18,6 @@ export async function getServerSideProps() {
 
 	//Parse Blog Posts
 	const parsedBlogPosts = parseBlogPosts(response)
-	console.log(parsedBlogPosts)
 
 	//Pass Blog Posts as Props
 	return {
