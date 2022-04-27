@@ -38,7 +38,7 @@ function parseBlogPosts(response) {
 
 //Dashed Case Function
 function dashedCase(title) {
-	const parsedTitle = title.replaceAll(" ", "-").toLowerCase()
+	const parsedTitle = title.replace(/\s/g, "-").toLowerCase()
 	return parsedTitle
 }
 

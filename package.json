@@ -2,7 +2,7 @@
 	"name": "portfolio",
 	"author": "Drew P. Worden <drew.p.worden@gmail.com>",
 	"description": "A portfolio to introduce and showcase the work of Drew P. Worden.",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
