@@ -1,0 +1,81 @@
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    justify-content: center;
+}
+
+.title {
+    font-family: inter;
+    font-weight: 900;
+    color: #333333;
+    font-size: 45px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.title:hover {
+    transform: translateY(-2px);
+}
+
+.title:active {
+    transform: translateY(2px);
+}
+
+.main {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1) inset;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.postTitle {
+    font-family: inter;
+    font-weight: 700;
+    color: #333333;
+    font-size: 25px;
+}
+
+.date {
+    font-family: inter;
+    font-weight: 500;
+    color: #999999;
+    font-size: 12px;
+}
+
+.body {
+    font-family: inter;
+    font-weight: 300;
+    color: black;
+    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+    .header {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .main {
+        padding: 48px;
+        gap: 16px;
+    }
+
+    .postTitle {
+        font-size: 20px;
+    }
+
+    .date {
+        font-size: 9.6px;
+    }
+
+    .body {
+        font-size: 11.2px;
+    }
+}
