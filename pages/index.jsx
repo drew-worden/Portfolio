@@ -34,9 +34,9 @@ export default function IndexPage({ blogPosts }) {
 			<section className={styles.leftSection}>
 				<h1 className={styles.title}>Drew P. Worden</h1>
 				<p className={styles.position}>
-					Mathematics Student
+					Data Scientist
 					<br />
-					Western Connecticut State University
+					IBM
 				</p>
 				<p className={styles.desc}>
 					Just a guy with an obsessive passion for abstract mathematics, technology, and
@@ -131,8 +131,7 @@ export default function IndexPage({ blogPosts }) {
 						<div className={styles.answerContainer}>
 							<span className={styles.type}>Answer</span>
 							<p className={styles.question}>
-								I currently reside in Litchfield County, Connecticut, United States.
-								If you don't like the weather, just wait 10 minutes.
+								I currently reside in Manhattan, New York.
 							</p>
 						</div>
 					</div>
@@ -158,7 +157,7 @@ export default function IndexPage({ blogPosts }) {
 							<span className={styles.type}>Answer</span>
 							<p className={styles.question}>
 								I currently hold a B.A. in Mathematics from Western Connecticut
-								State University.
+								State University and am starting a M.A. in Artificial Intelligence at Johns Hopkins University soon.
 							</p>
 						</div>
 					</div>
@@ -183,7 +182,7 @@ export default function IndexPage({ blogPosts }) {
 						<div className={styles.answerContainer}>
 							<span className={styles.type}>Answer</span>
 							<p className={styles.question}>
-								I am currently looking for roles in data science and machine
+								I am currently looking to expand into the field of data science and machine
 								learning, preferably with a strong application of applied
 								mathematics.
 							</p>
@@ -199,7 +198,7 @@ export default function IndexPage({ blogPosts }) {
 							<p className={styles.question}>
 								Since my other interests keep me at a desk most of the time, I like
 								to get outside. Hiking, swimming, going to the gym, pretty much
-								anything to get the blood pumping.
+								anything to get the blood pumping. Good films and music also hold a special place in my heart.
 							</p>
 						</div>
 					</div>
@@ -214,7 +213,7 @@ export default function IndexPage({ blogPosts }) {
 								Everything is subject to change but my current favorite book is
 								Fahrenheit 451 by Ray Bradbury, favorite movie is Interstellar by
 								Christopher Nolan, and favorite song is Cat's in the Cradle by Harry
-								Chapin
+								Chapin.
 							</p>
 						</div>
 					</div>
